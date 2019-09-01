@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+  isucon:
+    container_name: isucon_ubuntu18_maria10
+    build: .
+    tty: true
+    privileged: true
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./isucon8-practice:/isucon8-practice
