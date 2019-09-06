@@ -1,8 +1,8 @@
 version: '3.7'
 services:
   isucon:
-    container_name: isucon_ubuntu18_maria10
-    build: .
+    container_name: isucon_centos7_maria5
+    build: ""
     tty: true
     privileged: true
     ports:

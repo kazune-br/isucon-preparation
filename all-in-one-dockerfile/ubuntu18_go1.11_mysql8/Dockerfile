@@ -14,7 +14,7 @@ RUN echo 'export GOROOT=/usr/local/go' >> ~/.bashrc && \
     echo 'export PATH=$GOPATH/bin:$GOROOT/bin:$PATH' >> ~/.bashrc
 
 # gui用の設定をコマンドで回避するため
-COPY ./myslq_installation_command.txt /tmp/myslq_installation_command.txt
+COPY myslq_installation_command.txt /tmp/myslq_installation_command.txt
 
 # MySQLのダウンロード
 RUN wget https://dev.mysql.com/get/mysql-apt-config_0.8.13-1_all.deb && \
