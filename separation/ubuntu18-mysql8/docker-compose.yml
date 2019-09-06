@@ -1,0 +1,22 @@
+version: "3"
+services:
+  go:
+    container_name: go
+    build: .
+    tty: true
+    privileged: true
+    volumes:
+      - ./isucon:/isucon
+    ports:
+      - 8080:8080
+
+  db:
+    container_name: mysql
+    image: mysql:8.0.16
+    volumes:
+      - ./logs:/var/log/mysql
+      - ./mysql/my.cnf:/etc/mysql/conf.d/my.cnf
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+    ports:
+      - 3306:3306
